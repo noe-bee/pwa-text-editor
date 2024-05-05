@@ -1,0 +1,26 @@
+{
+  "name": "pwa-text-editor",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm run build && npm run server",
+    "start:dev": "concurrently \"npm run client\" \"npm run server\"",
+    "server": "node server.js",
+    "build": "webpack --mode production",
+    "install": "cd client && npm install",
+    "client": "cd client && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.0.0",
+    "inquirer": "^8.1.2"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.2"
+  }
+}
