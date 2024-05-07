@@ -6,9 +6,9 @@
   "scripts": {
     "start": "npm run build && npm run server",
     "start:dev": "concurrently \"npm run client\" \"npm run server\"",
-    "server": "node server.js",
+    "server": "cd server && npm run server",
     "build": "webpack --mode production",
-    "install": "cd client && npm install",
+    "install": "cd client && npm install && cd ../server && npm install",
     "client": "cd client && npm start"
   },
   "keywords": [],
